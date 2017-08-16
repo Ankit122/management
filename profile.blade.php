@@ -74,4 +74,4 @@ img.avatar {
   padding-right: 15px;
   float: left;
 }
-</style>>
+</style>

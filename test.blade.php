@@ -9,6 +9,6 @@
 @endsection
 
 @section('conte2')
-    <p>Tdfgdfntent.</p>
+    <p>This is my Footer content.</p>
 @endsection
 

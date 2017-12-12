@@ -13,6 +13,7 @@
                         <th>Termination Date</th>
                         <th>Terminated</th>
                         <th>Status</th>
+                        <th>Sign off Status</th>
                       </tr>
                       </thead>
                       <tbody>
@@ -29,6 +30,7 @@
                         <td>{{$val->termination_date}}</td>
                         <td>{{$val->is_terminate}}</td>
                         <td>{{$val->status}}</td>
+                        <td>{{$val->signOff}}</td>
                       </tr>
                       <?php
                       $i++;

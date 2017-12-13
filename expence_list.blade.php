@@ -3,9 +3,9 @@
          @section('content')
          @section('pagescript')
 <h3>Expences List</h3>
-
- @include('layout.error-notification')
- <input type="button" onclick="tableToExcel('datatable', 'W3C Example Table')" value="Export to Excel">                 <div class = "container-fluid">
+@include('layout.error-notification')
+ <input type="button" onclick="tableToExcel('datatable', 'W3C Example Table')" value="Export to Excel">                 
+ <div class = "container-fluid">
                     <table class="display" id="datatable">
                     <thead>
                       <tr>
@@ -18,15 +18,11 @@
                       </thead>
                       <tbody>
                       <?php
-                      
-                      $expence_details = DB::table('expence_grand_total')->select('*')
-                      ->orderBy('id', 'asc')->get();
+                      $expence_details = DB::table('expence_grand_total')->select('*')->orderBy('id', 'asc')->get();
                       //print_r($expence_details);
                       $i=1;
                       foreach ($expence_details as $key => $value) {
-                      
                       ?>
-
                       <tr>
                         <td>{{$i}}</td>
                         <td>{{$expence_details[$key]->purchase_id}}</td>
@@ -37,13 +33,9 @@
                       $i++;
                       }
                       ?>
-                     
                        </tbody>
                     </table>
                     </div>
-               
-       
-                     
                 
         <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
         <script type="text/javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>

@@ -78,11 +78,8 @@ var myConfig = {
             $purchase_detail = DB::table('expence')->select('*')->select('*')->get();
                 $i=1;
                       foreach ($purchase_detail as $key => $value) {
-                      
                       ?>
                       "{{date('M', strtotime($purchase_detail[$key]->pur_date))}}",
-
-
             <?php
                       $i++;
                       }
@@ -112,11 +109,9 @@ var myConfig = {
                       //print_r($expence_details);
                       $i=1;
                       foreach ($expence_details as $key => $value) {
-                      
                       ?>
-
-                "{{$expence_details[$key]->grand_total}}",
-             <?php
+                    "{{$expence_details[$key]->grand_total}}",
+                <?php
                       $i++;
                       }
                       ?>
